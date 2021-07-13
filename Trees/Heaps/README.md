@@ -28,7 +28,8 @@ Credits : https://ocw.mit.edu/courses/electrical-engineering-and-computer-scienc
  2) construct_max_heap ( S ) : construction of max heap from unordered number list [uses MaxHeapify].
  3) Heap sort : uses [MaxHeapify].
  
- Max_heapify( S, i):
+  Max_heapify( S, i):
+  
     L <- left_of_node(i)
     R <- right_of_node(i)
  
@@ -48,7 +49,9 @@ Credits : https://ocw.mit.edu/courses/electrical-engineering-and-computer-scienc
         swap( S(i), S(Largest))
         Max_Heapify( S, Largest)
  
- Construct_Max_Heap( S )
+ ### max heap construction
+ Construct_Max_Heap( S ):
+ 
     N = size_of(S)
     for i = N/2 to 1:
     // from i = N/2+1 because left(i) = 2*i = 2*(N/2+1) = N + 2 > N so they are leaves of tree with no children
@@ -57,6 +60,7 @@ Credits : https://ocw.mit.edu/courses/electrical-engineering-and-computer-scienc
 ### Heap Sort for decreasing sequences 
  
   Heap_Sort( L ):
+  
    N = size_of(L)
    Construct_Max_Heap( L )
    R = []   
